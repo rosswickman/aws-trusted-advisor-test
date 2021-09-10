@@ -14,7 +14,7 @@ With this Secret access key: `+s32O7HQyZkkXN9Pe/ukI3vRNEChDXR3LPBTVTx2`
 
 ## Result
 
-Received two emails from AWS in less than 5 Minutes (14:32CDT) of the [/readme.md](README.md) in this project being commited (14:27CDT).
+Received two emails from AWS in less than 5 Minutes (14:32CDT) of the [README.md](README.md) in this project being commited (14:27CDT).
 
 ### Email 1
 
