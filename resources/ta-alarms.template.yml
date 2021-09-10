@@ -1,0 +1,60 @@
+---
+AWSTemplateFormatVersion: 2010-09-09
+Description: CloudWatch Alarms for Exposed Access Keys trigger in Trusted Advisor
+
+Parameters:
+
+  SNSTopicArn:
+    Description: SNS Topic deployed for sending notifications of alarms
+    Type: String
+    MinLength: 1
+
+Resources:
+
+  ##############################
+  ## Trusted Advisor Alarms
+  ##############################
+
+  TAExposedAccessKeysYellowAlarm:
+    ## https://docs.aws.amazon.com/awssupport/latest/user/trusted-advisor-check-reference.html#exposed-access-keys
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: Exposed Access Keys (Trusted Advisor - Yellow)
+      AlarmDescription: !Sub "CID*${CustomerID} - *P1* - Exposed Access Keys"
+      Namespace: AWS/TrustedAdvisor
+      MetricName: YellowResources
+      Dimensions:
+        - Name: 'CheckName'
+          Value: 'Exposed Access Keys'
+      ComparisonOperator: GreaterThanOrEqualToThreshold
+      EvaluationPeriods: 1
+      Period: 60
+      Statistic: Sum
+      Threshold: 1
+      TreatMissingData: notBreaching
+      AlarmActions:
+        - !Ref SNSTopicArn
+      OKActions:
+        - !Ref SNSTopicArn
+
+  TAExposedAccessKeysRedAlarm:
+    ## https://docs.aws.amazon.com/awssupport/latest/user/trusted-advisor-check-reference.html#exposed-access-keys
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: Exposed Access Keys (Trusted Advisor - Red)
+      AlarmDescription: !Sub "CID*${CustomerID} - *P1* - Exposed Access Keys"
+      Namespace: AWS/TrustedAdvisor
+      MetricName: RedResources
+      Dimensions:
+        - Name: 'CheckName'
+          Value: 'Exposed Access Keys'
+      ComparisonOperator: GreaterThanOrEqualToThreshold
+      EvaluationPeriods: 1
+      Period: 60
+      Statistic: Sum
+      Threshold: 1
+      TreatMissingData: notBreaching
+      AlarmActions:
+        - !Ref SNSTopicArn
+      OKActions:
+        - !Ref SNSTopicArn
