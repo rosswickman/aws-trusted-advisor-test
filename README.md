@@ -26,8 +26,19 @@ Received two emails from AWS in less than 5 Minutes (14:32CDT) of the [README.md
 
 ![email2](images/Email2.png)
 
-### Permissions Policy
+### Permissions Policy Attachment
 
 **Update 1** - Later noticed that my user had applied to it an AWS Managed Policy `AWSCompromisedKeyQuarantineV2` which had the attached deny permissions in the [AttahcedPolicy](resources/AttachedPolicy.json)
 
 ![AttachedPolicy](images/AttachedPolicy.png)
+
+## Remediation
+
+In order to send notifications of `Exposed Access Keys` to more than one individual or the account root email in question you can create CloudWatch Alarms to trigger desired actions.
+
+I've created a template [ta-alarms.template.yml](resource/ta-alarms.template.yml) for very basic setup that requires and SNS Topic with some subscription.
+
+> **Important** This level of `Trusted Advisor` _check_ requires your account be on the _Business_ Support Tier or higher.
+
+![aws_support_plans](images/AWS_Support_Plans.png)
+
