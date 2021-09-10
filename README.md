@@ -11,3 +11,15 @@ Use this key:
 Access key ID: `AKIAXSWPYG26Q46DMVV6`
 
 With this Secret access key: `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`
+
+## Result
+
+Received two emails from AWS in less than 5 Minutes of the [/readme.md](README.md) in this project being commited.
+
+### Email 1
+
+![email1](images/Email1.png)
+
+### Email 2
+
+![email2](images/Email2.png)
