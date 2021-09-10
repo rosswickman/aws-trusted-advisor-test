@@ -20,12 +20,12 @@ Resources:
     Type: AWS::CloudWatch::Alarm
     Properties:
       AlarmName: Exposed Access Keys (Trusted Advisor - Yellow)
-      AlarmDescription: !Sub "CID*${CustomerID} - *P1* - Exposed Access Keys"
+      AlarmDescription: "Exposed Access Keys"
       Namespace: AWS/TrustedAdvisor
       MetricName: YellowResources
       Dimensions:
         - Name: 'CheckName'
-          Value: 'Exposed Access Keys'
+          Value: 'Exposed IAM Access Keys Found'
       ComparisonOperator: GreaterThanOrEqualToThreshold
       EvaluationPeriods: 1
       Period: 60
@@ -42,7 +42,7 @@ Resources:
     Type: AWS::CloudWatch::Alarm
     Properties:
       AlarmName: Exposed Access Keys (Trusted Advisor - Red)
-      AlarmDescription: !Sub "CID*${CustomerID} - *P1* - Exposed Access Keys"
+      AlarmDescription: "Exposed IAM Access Keys Found"
       Namespace: AWS/TrustedAdvisor
       MetricName: RedResources
       Dimensions:
