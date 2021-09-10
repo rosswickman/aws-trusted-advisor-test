@@ -25,3 +25,9 @@ Received two emails from AWS in less than 5 Minutes (14:32CDT) of the [README.md
 ### Email 2
 
 ![email2](images/Email2.png)
+
+### Permissions Policy
+
+**Update 1** - Later noticed that my user had applied to it an AWS Managed Policy `AWSCompromisedKeyQuarantineV2` which had the attached deny permissions in the [AttahcedPolicy](resources/AttachedPolicy.json)
+
+![AttachedPolicy](images/AttachedPolicy.png)
