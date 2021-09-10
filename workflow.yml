@@ -1,0 +1,38 @@
+---
+name: "Deliver Prod Resources to S3"
+
+# Trigger when commits are pushed to the master branch
+
+on:
+  push:
+    branches:
+      - master
+
+env:
+
+  AWS_DEFAULT_REGION: us-east-1
+  AWS_DEFAULT_OUTPUT: json
+  AWS_CFN_BUCKET: test-bucket
+  AWS_BUCKET_PREFIX: both
+  AWS_ACCESS_KEY_ID: AKIAXSWPYG26Q46DMVV6
+  AWS_SECRET_ACCESS_KEY: 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
+  CFN_DIR: cloudformation
+
+jobs:
+
+  cfn-deliver:
+    name: Deliver CloudFormation
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ env.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ env.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{env.AWS_DEFAULT_REGION}}
+    - name: Sync to S3
+      id: sync-s3
+      run: |
+        aws s3 sync ${{ env.CFN_DIR }} s3://${{ env.AWS_CFN_BUCKET }}/${{ env.AWS_BUCKET_PREFIX }} --region ${{ env.AWS_DEFAULT_REGION }}
