@@ -42,3 +42,8 @@ I've created a template [ta-alarms.template.yml](resources/ta-alarms.template.ym
 
 ![aws_support_plans](images/AWS_Support_Plans.png)
 
+### Compliance Notification
+
+**Update 2** - After deleting the Credentails but leaving my `trusted-advisor-test` IAM User in place, I was notified and _thanked_ by AWS for removing the credentials from the user account. 
+
+![Email3](images/Email3.png)
