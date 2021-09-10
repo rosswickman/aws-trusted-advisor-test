@@ -6,11 +6,13 @@ Just seeing if I can get alarms to trigger for `Exposed Access Keys` Trusted Adv
 
 ## Key Info
 
-Use this key:
+Use this:
 
-Access key ID: `AKIAXSWPYG26Q46DMVV6`
+Access key ID - `AKIAXSWPYG26Q46DMVV6`
 
-With this Secret access key: `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`
+With this:
+
+Secret access key - `+s32O7HQyZkkXN9Pe/ukI3vRNEChDXR3LPBTVTx2`
 
 ## Result
 
