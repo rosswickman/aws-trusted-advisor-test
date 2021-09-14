@@ -48,6 +48,6 @@ I've created a template [ta-alarms.template.yml](resources/ta-alarms.template.ym
 
 ![Email3](images/Email3.png)
 
-##Update 3** - The following the initial event, AWS sent another email confirming I completed the required steps to fix the problem as well as provided additional resources for review.
+**Update 3** - The following the initial event, AWS sent another email confirming I completed the required steps to fix the problem as well as provided additional resources for review.
 
 ![Email4](images/AWS_Followup.png)
