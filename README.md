@@ -58,7 +58,7 @@ I've created a template [ta-alarms.template.yml](resources/ta-alarms.template.ym
 
 ### Initial CloudWatch Alarms
 
-![Triggered_Alarms](images/Triggered_Alarms.png)
+![Triggered_Alarms](images/Triggered_Alarm.png)
 
 ### Initial CloudWatch Alarms
 
