@@ -51,3 +51,40 @@ I've created a template [ta-alarms.template.yml](resources/ta-alarms.template.ym
 **Update 3** - The following the initial event, AWS sent another email confirming I completed the required steps to fix the problem as well as provided additional resources for review.
 
 ![Email4](images/AWS_Followup.png)
+
+## Successful Notification & Configuration (28Sept21)
+
+**Update 4** - After getting to test in an account with `Enterprise` Support and other CloudWatch Alarms configured, there was a successful notificaiton for the CloudWatch Alarm created for the Trusted Advisor Exposed IAM Access Keys.
+
+### Initial CloudWatch Alarms
+
+![Triggered_Alarms](images/Triggered_Alarms.png)
+
+### Initial CloudWatch Alarms
+
+![CW_Alarms](images/Initial_CW_Alarms.png)
+
+### Trusted Advisor AWS Console
+
+![Trusted_Advisor](images/Trusted_Advisor.png)
+
+### CIS IAM Key Created Alarm Email
+
+![Email5](images/Email-Alarm_CIS.png)
+
+### Explosed Access Keys Alarm Email
+
+![Email6](images/Email-Alarm_Exposed_Keys.png)
+
+### CIS IAM Key Created OK Email
+
+![Email7](images/Email-OK_CIS_Check.png)
+
+### Exposed Key Created OK Email
+
+![Email8](images/Email-OK_IAM_Key_Created.png)
+
+
+## Conclusion
+
+Testing completed for this process and implementation 29-Sept-21
